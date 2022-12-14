@@ -32,25 +32,25 @@
 </template>
 
 <script>
-import SignUpValidations from "../services/SignupValidations";
+import SignUpValidations from "../services/SignupValidations"
 export default {
   data() {
     return {
       email: "",
       password: "",
       errors: [],
-    };
+    }
   },
   methods: {
     onLogin() {
-      let validations = new SignUpValidations(this.email, this.password);
-      this.errors = validations.checkValidations();
+      let validations = new SignUpValidations(this.email, this.password)
+      this.errors = validations.checkValidations()
       if (this.errors.length) {
-        return false;
+        return false
       } else {
-        console.log("Başarılı");
+        console.log("Başarılı")
       }
     },
   },
-};
+}
 </script>

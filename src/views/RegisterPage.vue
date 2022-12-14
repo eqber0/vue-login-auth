@@ -37,8 +37,8 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
-import SignupValidations from "../services/SignupValidations";
+import { mapActions } from "vuex"
+import SignupValidations from "../services/SignupValidations"
 export default {
   data() {
     return {
@@ -46,23 +46,23 @@ export default {
       password: "",
       errors: [],
       error: "",
-    };
+    }
   },
   methods: {
     ...mapActions(["signup"]),
     onSignup() {
-      let validations = new SignupValidations(this.email, this.password);
-      this.errors = validations.checkValidations();
+      let validations = new SignupValidations(this.email, this.password)
+      this.errors = validations.checkValidations()
 
       if ("email" in this.errors || "password" in this.errors) {
-        return false;
+        return false
       }
       this.signup({ email: this.email, password: this.password }).catch(
         (error) => {
-          this.error = error;
+          this.error = error
         }
-      );
+      )
     },
   },
-};
+}
 </script>
