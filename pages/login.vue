@@ -15,7 +15,7 @@
             <label>Password</label>
             <input type="password" class="form-control" v-model="password" />
           </div>
-          <div class="error">
+          <div class="error" v-if="errors.passoword">
             {{ errors.password }}
           </div>
           <p>

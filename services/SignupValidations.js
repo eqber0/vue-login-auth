@@ -18,4 +18,11 @@ export default class SignupValidations {
 
     return errors;
   }
+
+  static getErrorMessage(errorCode) {
+    switch (errorCode) {
+      case "EMAIL_EXISTS":
+        return "Email already exist.";
+    }
+  }
 }
