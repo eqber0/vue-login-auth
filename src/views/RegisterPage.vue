@@ -23,10 +23,6 @@
               {{ errors.password }}
             </div>
           </div>
-          <p>
-            Already have an account
-            <nuxt-link to="/login" class="primary">login</nuxt-link>.
-          </p>
           <div class="my-3">
             <button type="submit" class="btn btn-primary">Register</button>
           </div>
